@@ -1,2 +1,2 @@
 #!/bin/bash -e
-exec chpst -u <%= node['znc']['user'] %> znc -d <%= node['znc']['data_dir'] %>
+exec chpst -u <%= node['znc']['user'] %> znc -d <%= node['znc']['data_dir'] %> -f
