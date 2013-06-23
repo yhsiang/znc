@@ -11,21 +11,18 @@ e.g.
 Attributes
 ----------
 
-e.g.
-#### znc::default
-
 Usage
 -----
-#### znc::default
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[znc]"
-  ]
-}
 ```
+$vagrant up
+```
+###webadmin
+Open browser link to https://localhost:5487 
+
+###irc connect
+Open irc client link to localhost:5487
+
+/quote PASS g0vznc:g0vznc
 
 Contributing
 ------------
