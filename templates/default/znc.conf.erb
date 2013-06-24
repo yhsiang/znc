@@ -17,39 +17,39 @@ ServerThrottle = 30
 LoadModule   = <%= "#{mod} #{params}".strip  %>
 <% end -%>
 
-<User g0vznc>
-	Pass = sha256#08c840d49b089cce92a285a3ebf178eadae15510b461a7165924694358e16e18#D*nUu5!5*Z1oD-A.D.4o#
-        Nick = g0vznc
-        AltNick = g0vznc_
-        Ident = g0vznc
-        RealName = GOV ZNC
-        QuitMsg = ZNC - http://znc.in
-        StatusPrefix = *
-        ChanModes = +stn
-        Buffer = 500
-        KeepBuffer = false
-        MultiClients = true
-        DenyLoadMod = false
-        Admin = true
-        DenySetBindHost = false
-        TimestampFormat = [%H:%M:%S]
-        AppendTimestamp = false
-        PrependTimestamp = true
-        TimezoneOffset = 0.00
-        JoinTries = 10
-        MaxJoins = 5
-        IRCConnectEnabled = true
+<User <%= node['znc']['adminuser']%>>
+	Pass = <%= node['znc']['passhash'] %>
+	Nick = <%= node['znc']['nick'] %>
+	AltNick = <%= node['znc']['altnick'] %> 
+	Ident = <%= node['znc']['ident'] %>
+	RealName = <%= node['znc']['realname'] %>
+	QuitMsg = <%= node['znc']['quitmsg'] %>
+	StatusPrefix = <%= node['znc']['stautsprefix'] %>
+	ChanModes = <%= node['znc']['chanmodes'] %>
+	Buffer = <%= node['znc']['buffer'] %>
+	KeepBuffer = false
+	MultiClients = true
+	DenyLoadMod = false
+	Admin = true
+	DenySetBindHost = false
+	TimestampFormat = [%H:%M:%S]
+	AppendTimestamp = false
+	PrependTimestamp = true
+	TimezoneOffset = 0.00
+	JoinTries = 10
+	MaxJoins = 5
+	IRCConnectEnabled = true
 
-        LoadModule = admin
-        LoadModule = chansaver
-        LoadModule = keepnick
-        LoadModule = kickrejoin
-        LoadModule = nickserv
-        LoadModule = perform
-        LoadModule = simple_away
+	LoadModule = admin
+	LoadModule = chansaver
+	LoadModule = keepnick
+	LoadModule = kickrejoin
+	LoadModule = nickserv
+	LoadModule = perform
+	LoadModule = simple_away
 
-        Server = irc.freenode.net 6667
+	Server = irc.freenode.net 6667
 
-        <Chan g0v.tw>
-        </Chan>
- </User>
+	<Chan <%= node['znc']['basechan'] %>>
+	</Chan>
+</User>

@@ -1,0 +1,13 @@
+default['znc']['adminuser'] = 'g0vznc'
+default['znc']['pass'] = 'g0vznc' 
+default['znc']['salt'] = {}
+default['znc']['passhash'] = 'sha256#08c840d49b089cce92a285a3ebf178eadae15510b461a7165924694358e16e18#D*nUu5!5*Z1oD-A.D.4o#'
+default['znc']['nick'] = "#{node['znc']['adminuser']}"
+default['znc']['altnick'] = "#{node['znc']['adminuser']}_" 
+default['znc']['ident'] = "#{node['znc']['adminuser']}"
+default['znc']['realname'] = 'not gov znc'
+default['znc']['quitmsg'] = 'Left From ZNC'
+default['znc']['stautsprefix'] = '*'
+default['znc']['chanmodes'] = '+stn'
+default['znc']['buffer'] = '500'
+default['znc']['basechan'] ='#g0v.tw'
