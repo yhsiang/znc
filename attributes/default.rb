@@ -1,5 +1,3 @@
-default['znc']['install_method'] = 'package'
-
 default['znc']['data_dir'] = '/etc/znc'
 default['znc']['user'] = 'znc'
 default['znc']['group'] = 'znc'
