@@ -6,6 +6,7 @@ Requirements
 ------------
 
 [runit](https://github.com/cookbooks/runit)
+nodejs
 
 Attributes
 ----------
@@ -35,6 +36,11 @@ use g0vznc:g0vznc login
 ###irc connect
 Open irc client link to localhost:5487
 /quote PASS g0vznc:g0vznc
+
+###create user
+```
+$ sudo NODE_PATH=/usr/lib/node_modules createzncuser
+```
 
 Contributing
 ------------
